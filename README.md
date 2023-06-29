@@ -11,6 +11,7 @@ To run the project follow the below commands:
 * source myenv/bin/activate ( For Linux & Mac )
 * myenv/Scripts/activate.bat ( Windows )
 * pip install -r requirements.txt
+* Download dataser, model, featurs, captions and other files from and place it in each activity folder: https://drive.google.com/drive/folders/1DUxlrr7qZM5aQYQWeziUopecIJ68JrKo?usp=sharing
 * python3 main.py
 ```
 
