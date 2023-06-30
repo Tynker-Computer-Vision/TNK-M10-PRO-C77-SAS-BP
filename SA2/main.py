@@ -17,15 +17,15 @@ import numpy as np
 
 features = 'null'
 
-with open('features.pkl', 'rb') as f:
+with open('../features.pkl', 'rb') as f:
     features = pickle.load(f)
 
-with open('captions.txt', 'r') as f:
+with open('../captions.txt', 'r') as f:
     next(f)
     captions_doc = f.read()
 
 
-model = keras.models.load_model('best_model.h5')
+model = keras.models.load_model('../best_model.h5')
 
 mapping = {}
 for line in tqdm(captions_doc.split('\n')):
