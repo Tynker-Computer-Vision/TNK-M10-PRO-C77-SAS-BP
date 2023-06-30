@@ -17,15 +17,15 @@ import numpy as np
 
 features = 'null'
 
-with open('features.pkl', 'rb') as f:
+with open('../features.pkl', 'rb') as f:
     features = pickle.load(f)
 
-with open('captions.txt', 'r') as f:
+with open('../captions.txt', 'r') as f:
     next(f)
     captions_doc = f.read()
 
 
-model = keras.models.load_model('best_model.h5')
+model = keras.models.load_model('../best_model.h5')
 
 mapping = {}
 for line in tqdm(captions_doc.split('\n')):
@@ -99,13 +99,13 @@ vgg_model = Model(inputs=vgg_model.inputs, outputs=vgg_model.layers[-2].output)
 
 cap = cv2.VideoCapture("video3.mp4")
 
-i=10
+i=100
 while True:
     try:
         success, img = cap.read()
         img = cv2.flip(img, 1)
 
-        if i == 10:
+        if i == 10o:
             image = np.asarray(img)     
             image = img
             image = cv2.resize(image, (224, 224))
@@ -115,6 +115,8 @@ while True:
             
             # Call the predict_caption function with model, feature, tokenizer and save the returned value in variable caption
             
+            caption = caption.replace('startseq ', '')
+            caption = caption.replace('endseq', '')
 
             i = 0
                     
