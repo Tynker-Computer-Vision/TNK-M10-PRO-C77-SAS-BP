@@ -124,7 +124,7 @@ while True:
         i = i+1      
 
         cv2.imshow("Image", img)
-        cv2.waitKey(0)
+        
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
     except Exception as e:
