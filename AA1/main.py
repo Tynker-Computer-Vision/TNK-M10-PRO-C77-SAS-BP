@@ -91,7 +91,7 @@ vgg_model = VGG16()
 
 vgg_model = Model(inputs=vgg_model.inputs, outputs=vgg_model.layers[-2].output)
 
-cap = cv2.VideoCapture("video3.mp4")
+cap = cv2.VideoCapture("../video3.mp4")
 
 i=100
 while True:
