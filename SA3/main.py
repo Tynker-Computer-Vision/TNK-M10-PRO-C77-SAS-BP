@@ -27,7 +27,7 @@ with open('../captions.txt', 'r') as f:
 model = keras.models.load_model('../best_model.h5')
 
 mapping = {}
-for line in tqdm(captions_doc.split('\n')):
+for line in captions_doc.split('\n'):
     tokens = line.split(',')
     if len(line) < 2:
         continue
