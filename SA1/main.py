@@ -1,7 +1,6 @@
 import os
 import pickle
 import numpy as np
-from tqdm.notebook import tqdm
 
 from tensorflow.keras.applications.vgg16 import VGG16, preprocess_input
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
