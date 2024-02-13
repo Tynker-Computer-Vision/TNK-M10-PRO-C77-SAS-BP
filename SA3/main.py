@@ -119,7 +119,7 @@ while True:
 
             i = 0
                     
-        img = cv2.putText(img, caption, (10,10), cv2.FONT_HERSHEY_DUPLEX, 0.3, (255, 255, 255), 2)
+        img = cv2.putText(img, caption, (20,50), cv2.FONT_HERSHEY_DUPLEX, 0.9, (255, 255, 255), 2)
         print(caption)
         i = i+1      
 
