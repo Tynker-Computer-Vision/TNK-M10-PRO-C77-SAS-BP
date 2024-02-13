@@ -1,7 +1,7 @@
 import os
 import pickle
 import numpy as np
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 
 from tensorflow.keras.applications.vgg16 import VGG16, preprocess_input
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
@@ -118,7 +118,7 @@ while True:
 
             i = 0
                     
-        img = cv2.putText(img, caption, (10,10), cv2.FONT_HERSHEY_DUPLEX, 0.3, (255, 255, 255), 2)
+        img = cv2.putText(img, caption, (20,50), cv2.FONT_HERSHEY_DUPLEX, 0.9, (255, 255, 255), 2)
         print(caption)
         i = i+1      
 
